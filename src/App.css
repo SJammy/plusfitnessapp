@@ -37,3 +37,192 @@
     transform: translateY(0px);
   }
 }
+
+/* div {
+  margin: 5px;
+  padding: 2px;
+  border: mediumblue dashed 0.5px;
+} */
+
+html {
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(244, 244, 244);
+  color: #333;
+  /* color: midnightblue; */
+  color: aliceblue;
+}
+
+.container,
+.container_list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-text {
+  font-size: 25px;
+}
+
+.join-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.join-group-item {
+  display: inline;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.interval-list-screen {
+  background-color: #333;
+  padding: 15px;
+}
+
+.interval-list-settings {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  /* width: 40%; */
+  /* border: #333 1px solid; */
+  /* padding:  0; */
+  /* margin: 0; */
+}
+
+.interval-list-ul {
+  /* margin: 0; */
+  padding: 15px;
+  list-style: none;
+}
+
+.interval-list {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.interval-list-item {
+  color: midnightblue;
+  background-color: aliceblue;
+  /* display: inline-block; */
+  /* list-style: upper-roman; */
+  list-style-type: decimal;
+  width: 80%;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -6px black;
+
+  margin:  5px 10px;
+  padding: 5px;
+}
+
+.start-btn {
+  width: 100%;
+  background-color: #1db013;
+  border-radius: 20px;
+  box-shadow: 0 8px 6px -6px black;
+
+  font-size: large;
+
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.btns-two {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+#btn-timer-continue {
+width: 150%;
+}
+
+#btn-timer-end {
+  width: 100%;
+  background-color: #333;
+  color: #23c717;
+}
+
+.btn-modes {
+  display: flex;
+  justify-content: right;
+}
+
+.btn-modes-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.btn-modes-title > span {
+  font-weight: 100;
+  color: rgb(201, 201, 202);
+}
+
+.btn-modes-type {
+  background-color: #333;
+  color: aliceblue;
+
+}
+
+
+
+
+.workout-box {
+  width: 100%;
+  height: auto;
+ background-color: #333;
+  border: #23c717 1px solid;
+
+  text-align: center;
+
+  margin: 0px auto;
+  /* margin-top: 0; */
+  /* padding-top: 80px; */
+  padding: 15px;
+}
+
+.workout-box > p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.workout-img-box {
+  width: 80%;
+  height: auto;
+  /* border: #23c717 1px solid; */
+  border-radius: 50%;
+  overflow: hidden; 
+
+  margin: 50px auto;
+  /* padding: 50px; */
+  /* padding-top: 80px; */
+}
+
+
+.workout-img-box img {
+  width: 90%; /* Make sure the image fills the container */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+.workout-timer > h1 {
+  font-size: 50px;
+}

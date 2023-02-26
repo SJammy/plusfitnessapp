@@ -1,0 +1,15 @@
+[
+  { "type": "exercise", "id": "frontplank", "name": "Front Plank" },
+  { "type": "exercise", "id": "crunches", "name": "Crunches" },
+  { "type": "exercise", "id": "steamengine", "name": "Steam Engine" },
+  { "type": "exercise", "id": "pushup", "name": "Push-Ups" },
+  { "type": "exercise", "id": "squats", "name": "Squats" },
+  { "type": "exercise", "id": "lunges", "name": "Lunges" },
+  { "type": "exercise", "id": "sideplank", "name": "Side-Plank" },
+  { "type": "exercise", "id": "pushuprotation", "name": "Push-Ups with Rotation" },
+  { "type": "exercise", "id": "leglifts", "name": "Leg Lifts" },
+  { "type": "exercise", "id": "scissorkicks", "name": "Scissor Kicks" },
+  { "type": "exercise", "id": "superman", "name": "Superman" },
+  { "type": "exercise", "id": "hipraises", "name": "Hip Raises" },
+  { "type": "exercise", "id": "sixinchhold", "name": "Six Inch Hold" }
+]
