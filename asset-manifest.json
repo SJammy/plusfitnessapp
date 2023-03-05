@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/plusfitnessapp1.0/static/css/main.09b894ed.css",
+    "main.js": "/plusfitnessapp1.0/static/js/main.55a68e3f.js",
+    "static/media/beep-start-1.mp3": "/plusfitnessapp1.0/static/media/beep-start-1.2aa2067a77901ed27145.mp3",
+    "index.html": "/plusfitnessapp1.0/index.html",
+    "main.09b894ed.css.map": "/plusfitnessapp1.0/static/css/main.09b894ed.css.map",
+    "main.55a68e3f.js.map": "/plusfitnessapp1.0/static/js/main.55a68e3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09b894ed.css",
+    "static/js/main.55a68e3f.js"
+  ]
+}
