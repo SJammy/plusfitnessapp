@@ -12,16 +12,6 @@ import WorkoutStopScreen from './pages/WorkoutStopScreen';
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <Counter />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-        
-    //   </header>
-    // </div>
     <>
     <p style={{textAlign: 'center', color: 'black'}}>Plus Fitness App</p>
     <HashRouter>
