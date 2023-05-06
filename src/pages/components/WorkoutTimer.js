@@ -6,7 +6,6 @@ import imgUrl from '../../img/img-imports'
 
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import AudioPlayer from './PlayAudio'
 
 function WorkoutTimer({ totalTime = 5, intervalTimes = [1, 2, 1] }) {
   const navigate = useNavigate()
@@ -111,11 +110,7 @@ function WorkoutTimer({ totalTime = 5, intervalTimes = [1, 2, 1] }) {
 
   return (
     intervals.length > 0 && (
-      <div
-        className='workout-timer'
-        // onClick={isRunning ? stopCountdown : startCountdown}
-        // disabled={isRunning ? isRunning : !isRunning}
-      >
+      <div className='workout-timer'>
         {isRunning ? (
           <button
             className='start-btn'
@@ -134,10 +129,7 @@ function WorkoutTimer({ totalTime = 5, intervalTimes = [1, 2, 1] }) {
             >
               Continue
             </button>
-            {/* <button onClick={resetCountdown} disabled={isRunning}>
-          Reset
-        </button> */}
-            {/* <Link to='/'> */}
+
             <button
               id='btn-timer-end'
               className='start-btn'
@@ -145,15 +137,9 @@ function WorkoutTimer({ totalTime = 5, intervalTimes = [1, 2, 1] }) {
             >
               End
             </button>
-            {/* </Link> */}
           </div>
         )}
         <>
-          {/* <AudioPlayer initialTime={intervals[intervalIndex].time} timeleft /> */}
-          <div>
-            {/* <p disabled>Time left: {timeLeft}</p> */}
-            {/* {isPlaying && <p disabled>Playing audio...</p>} */}
-          </div>
           <p>
             Exercises{' '}
             <strong>
@@ -175,7 +161,7 @@ function WorkoutTimer({ totalTime = 5, intervalTimes = [1, 2, 1] }) {
 
         <TimerCircle
           initialTime={intervals[intervalIndex].time}
-          exerciseImg={imgUrl[intervals[intervalIndex].id]} // TODO Change to exerciseImg
+          exerciseImg={imgUrl[intervals[intervalIndex].id]}
           timeLeftInput={timeLeft}
           start={onStart}
           stop={onStop}

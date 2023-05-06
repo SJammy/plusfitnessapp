@@ -1,5 +1,3 @@
-// IntervalList.js
-
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -9,7 +7,6 @@ import { startWorkout, resetWorkout } from '../../actions/workoutActions'
 const IntervalList = ({ intervalListItems = exercises }) => {
   const [selectedItems, setSelectedItems] = useState([])
   const [intervalsQty, setIntervalsQty] = useState(5)
-  // const [intervalTime, setIntervalTime] = useState(30)
   const [intervalTime, setIntervalTime] = useState(25)
   const [timeGap, setTimeGap] = useState(3)
   const [qtyOfSets, setQtyOfSets] = useState(3)
@@ -23,7 +20,6 @@ const IntervalList = ({ intervalListItems = exercises }) => {
   const {
     selectedItems: selectedItemsReducer,
     workoutSettings: workoutSettingsReducer,
-    // workoutTimerData: workoutTimerDataReducer,
   } = workout
 
   const workoutSettings = {
@@ -62,10 +58,6 @@ const IntervalList = ({ intervalListItems = exercises }) => {
   )
 
   const produceWorkoutTimerData = useCallback(() => {
-    // intervalsQty,
-    // intervalTime,
-    // timeGap,
-    // qtyOfSets,
     const dataList = []
 
     for (let i = 0; i < qtyOfSets; i++) {
@@ -136,9 +128,7 @@ const IntervalList = ({ intervalListItems = exercises }) => {
 
   // Trigger selectRandomItems on component mount and when intervalsQty prop changes
   useEffect(() => {
-    // if (selectedItemsReducer.length !== 0) {
     selectRandomItems()
-    // }
   }, [intervalsQty, selectRandomItems])
 
   useEffect(() => {
@@ -165,7 +155,6 @@ const IntervalList = ({ intervalListItems = exercises }) => {
   }
 
   function handleQtyDecrease() {
-    // if (intervalsQty > 5) {
     if (intervalsQty > 2) {
       setIntervalsQty((prevQty) => prevQty - 1)
     }
@@ -178,7 +167,6 @@ const IntervalList = ({ intervalListItems = exercises }) => {
   }
 
   function handleTimeDecrease() {
-    // if (intervalTime > 20) {
     if (intervalTime > 10) {
       // minimum interval time is 1 minute
       setIntervalTime((prevTime) => prevTime - 1) // subtract 1 minute
@@ -213,22 +201,14 @@ const IntervalList = ({ intervalListItems = exercises }) => {
   return (
     <div className='interval-list-screen'>
       {/* IntervalList */}
-      {/* <button className='start-btn' onClick={handleStartWorkout}>
-        START WORKOUT
-      </button> */}
+
       <div>
         <button className='start-btn' onClick={handleStartWorkout}>
           START WORKOUT
         </button>
       </div>
 
-      {/* <div className='join-group'> */}
-      {/* <h1 className='join-group-item'>
-          Exercises:
-          <span className=''> {selectedItems.length}</span>
-        </h1> */}
       <h1>Workout Time: {workoutTime}</h1>
-      {/* </div> */}
 
       {/* Settings Mode Display & Buttons */}
       <ul className='interval-list-ul'>
@@ -247,83 +227,57 @@ const IntervalList = ({ intervalListItems = exercises }) => {
           <div className='interval-list-item'>
             <p className='join-group-item'>
               Interval time 0:{intervalTime}
-              {settingsMode && ( // TODO Change to settingsMode
+              {settingsMode && (
                 <span className='join-group-item'>
                   <button onClick={handleTimeIncrease}>+</button>
                   <button onClick={handleTimeDecrease}>-</button>
-                  {/* <span>{formatTime(intervalTime)}</span> */}
                 </span>
               )}
             </p>
-            
           </div>
         </li>
         <li className='interval-list'>
           <div className='interval-list-item'>
-            
             <p className='join-group-item'>
               Gap time 0:0{timeGap}
-              {settingsMode && ( // TODO Change to settingsMode
+              {settingsMode && (
                 <span className='join-group-item'>
                   <button onClick={handleTimeGapIncrease}>+</button>
                   <button onClick={handleTimeGapDecrease}>-</button>
-                  {/* <span>{formatTime(timeGap)}</span> */}
                 </span>
               )}
             </p>
           </div>
         </li>
-<br/>
+        <br />
         {/* EXERCISES & SETS */}
         <li className='interval-list'>
           <div className='interval-list-item '>
-          {/* <div className='interval-list-settings'> */}
             <div className='join-group-item '>
               Exercises {intervalsQty}
-              {settingsMode && ( // TODO Change to settingsMode
+              {settingsMode && (
                 <span className='join-group-item'>
                   <button onClick={handleQtyIncrease}>+</button>
                   <button onClick={handleQtyDecrease}>-</button>
-                  {/* <span>{intervalsQty}</span> */}{' '}
                 </span>
               )}
             </div>
-            {/* </div> */}
-            
           </div>
         </li>
         <li className='interval-list'>
           <div className='interval-list-item '>
-            {/* <div className='interval-list-settings'> */}
-              <div className='join-group-item '>
-                Sets {qtyOfSets}
-                {settingsMode && ( // TODO Change to settingsMode
-                  <span className='join-group-item'>
-                    <button onClick={handleQtyOfSetsIncrease}>+</button>
-                    <button onClick={handleQtyOfSetsDecrease}>-</button>
-                    {/* <span>{qtyOfSets}</span> */}{' '}
-                  </span>
-                )}
-              </div>
-            {/* </div> */}
+            <div className='join-group-item '>
+              Sets {qtyOfSets}
+              {settingsMode && (
+                <span className='join-group-item'>
+                  <button onClick={handleQtyOfSetsIncrease}>+</button>
+                  <button onClick={handleQtyOfSetsDecrease}>-</button>
+                </span>
+              )}
+            </div>
           </div>
         </li>
 
-        {/* <li className='interval-list'> */}
-        {/* <div className='interval-list-item'> */}
-        {/* Refresh List button */}
-        {/* <button className='refresh-btn' onClick={selectRandomItems}> */}
-        {/* Refresh List */}
-        {/* </button> */}
-        {/* Edit Settings button */}
-        {/* <button */}
-        {/* className='refresh-btn' */}
-        {/* onClick={() => setSettingsMode(!settingsMode)} */}
-        {/* > */}
-        {/* Edit Settings */}
-        {/* </button> */}
-        {/* </div> */}
-        {/* </li> */}
         <br />
 
         <br />
