@@ -9,7 +9,7 @@ You can access the Plus Fitness App web application by visiting the following UR
 
 Once you have the web application open in your browser, you can start using it for workout routines. Here's how you can use the application:
 
-    Instant Workout: Click on the "Start" to commence a standard workout.
+    Instant Workout: Click on "Start" to commence a standard workout.
 
     Customise Settings: Set interval duration, number of sets, qantity of exercises and rest time. This allows you to customize the intensity and recovery periods for each workout session.
 
